@@ -1,5 +1,3 @@
-import { profile } from '../data'
-
 export default function Hero() {
   return (
     <section className="hero container" id="top">
