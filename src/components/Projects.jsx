@@ -14,7 +14,7 @@ export default function Projects() {
       <div className="grid">
         {projects.map((p) => (
           <button type="button" className="card" key={p.id} onClick={() => setActive(p)}>
-            <div className={`card__img tone-${p.tone}`} role="img" aria-label="Plassholderbilde">
+            <div className={`card__img tone-${p.tone}`} role="img" aria-label="Placeholderbilde">
               <span>{String(p.id).padStart(2, '0')}</span>
             </div>
             <div className="card__body">
