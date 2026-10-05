@@ -1,16 +1,31 @@
-# React + Vite
+# Portefølje
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Min personlige portefølje som viser prosjekter innen frontend- og mobilutvikling.
 
-Currently, two official plugins are available:
+**Live:** [suzsabic.github.io](https://suzsabic.github.io)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Teknologier
 
-## React Compiler
+- [React](https://react.dev) og [Vite](https://vite.dev)
+- Vanlig CSS (ingen rammeverk)
+- Publisert med GitHub Pages og GitHub Actions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Struktur
 
-## Expanding the Oxlint configuration
+```
+src/
+├── components/   # Header, Hero, Projects, ProjectModal, About, Contact
+├── data.js       # tekst, prosjekter og ferdigheter
+├── index.css     # farger, fonter og stil
+└── main.jsx
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Innholdet (prosjekter, ferdigheter, e-post) endres i `src/data.js`. Farger og fonter ligger som CSS-variabler øverst i `src/index.css`.
+
+## Publisering
+
+Siden bygges og publiseres automatisk til GitHub Pages hver gang det pushes til `main`. Oppsettet ligger i `.github/workflows/deploy.yml`.
+
+## Kontakt
+
+- [LinkedIn](https://linkedin.com/in/suzana-s-53bb9a196)
