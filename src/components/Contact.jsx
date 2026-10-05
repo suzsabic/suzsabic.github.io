@@ -5,12 +5,10 @@ export default function Contact() {
     <>
       <section className="section container contact" id="kontakt">
         <p className="eyebrow">Kontakt</p>
-        <h2>La oss lage noe fint sammen</h2>
         <a className="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>
         <div className="socials">
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Instagram</a>
+          <a href="https://github.com/suzsabic">GitHub</a>
+          <a href="https://linkedin.com/in/suzana-s-53bb9a196">LinkedIn</a>
         </div>
       </section>
       <footer className="footer">

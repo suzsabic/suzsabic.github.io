@@ -71,7 +71,6 @@ export default function ProjectModal({ project, onClose }) {
           </div>
           <dl className="meta">
             <div><dt>År</dt><dd>{project.year}</dd></div>
-            <div><dt>Rolle</dt><dd>{project.role}</dd></div>
           </dl>
           <div className="modal__links">
             <a className="btn" href="#">Se live</a>
