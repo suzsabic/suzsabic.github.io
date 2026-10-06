@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProjectModal({ project, onClose }) {
   const [index, setIndex] = useState(0)
@@ -49,9 +51,13 @@ export default function ProjectModal({ project, onClose }) {
             ))}
           </div>
           <button className="slideshow__arrow slideshow__arrow--prev" onClick={() => go(-1)}
-            aria-label="Forrige bilde">‹</button>
+            aria-label="Forrige bilde">
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </button>
           <button className="slideshow__arrow slideshow__arrow--next" onClick={() => go(1)}
-            aria-label="Neste bilde">›</button>
+            aria-label="Neste bilde">
+            <FontAwesomeIcon icon={faAngleRight} />
+          </button>
           <div className="slideshow__dots">
             {project.slides.map((_, i) => (
               <button key={i} className={i === index ? 'is-active' : ''}
