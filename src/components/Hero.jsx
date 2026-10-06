@@ -1,3 +1,5 @@
+import CodeCard from "./CodeCard"
+
 export default function Hero() {
   return (
     <section className="hero container" id="top">
@@ -15,9 +17,8 @@ export default function Hero() {
           <a className="btn" href="#kontakt">Ta kontakt</a>
         </div>
       </div>
-      <div className="hero__image" role="img" aria-label="Placeholder for portrett">
-        <div className="arch" />
-        <span className="hero__leaf" aria-hidden="true" />
+      <div>
+        <CodeCard />
       </div>
     </section>
   )

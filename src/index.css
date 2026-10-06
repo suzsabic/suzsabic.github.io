@@ -83,18 +83,20 @@ p { margin: 0; }
   box-shadow: 0 8px 20px color-mix(in srgb, var(--brown) 15%, transparent);
 }
 
-.hero__image { position: relative; justify-self: center; width: min(100%, 380px); }
-.arch {
-  aspect-ratio: 3 / 4; border-radius: 999px 999px 1.5rem 1.5rem;
-  background:
-    radial-gradient(circle at 30% 25%, var(--blush), transparent 55%),
-    linear-gradient(160deg, var(--sage), var(--moss));
+/* Kodevindu */
+.code {
+  width: 100%; max-width: 420px; height: 400px; background: var(--ink); color: var(--sand);
+  border-radius: 1rem; overflow: hidden; font-size: 0.9rem;
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--brown) 20%, transparent);
 }
-.arch--small { background: linear-gradient(160deg, var(--blush), var(--beige)); }
-.hero__leaf {
-  position: absolute; right: -1.5rem; bottom: 2rem; width: 7rem; height: 7rem;
-  border-radius: 50%; background: var(--blush); border: 6px solid var(--cream);
-}
+.code__bar { display: flex; align-items: center; gap: 0.4rem; padding: 0.8rem 1rem; background: color-mix(in srgb, var(--ink) 80%, black); }
+.code__bar span { width: 0.7rem; height: 0.7rem; border-radius: 50%; background: var(--beige); opacity: 0.6; }
+.code__bar small { margin-left: auto; opacity: 0.6; }
+.code pre { margin: 0; padding: 1.5rem; line-height: 1.8; overflow-x:auto; }
+.code .k { color: var(--blush); }
+.code .p { color: var(--sage); }
+.code .s { color: var(--sand); }
+.code .n { color: var(--blush); }
 
 /* Sections */
 .section { padding-block: 6rem; }

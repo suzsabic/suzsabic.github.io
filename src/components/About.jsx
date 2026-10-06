@@ -4,9 +4,6 @@ export default function About() {
   return (
     <section className="section about" id="om-meg">
       <div className="container about__inner">
-        <div className="about__image" role="img" aria-label="Placeholderbilde">
-          <div className="arch arch--small" />
-        </div>
         <div>
           <p className="eyebrow">Om meg</p>
           <h2>Hei! Jeg er Suzana Sabic.</h2>
@@ -16,6 +13,8 @@ export default function About() {
           <ul className="tags tags--lg">
             {skills.map((s) => <li key={s}>{s}</li>)}
           </ul>
+        </div>
+        <div className="about__image">
         </div>
       </div>
     </section>
