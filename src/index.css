@@ -44,7 +44,7 @@ p { margin: 0; }
 /* Header */
 .header {
   position: sticky; top: 0; z-index: 10;
-  background: color-mix(in srgb, var(--cream) 85%, transparent);
+  background: color-mix(in srgb, var(--cream) 50%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid color-mix(in srgb, var(--beige) 50%, transparent);
 }
@@ -203,7 +203,7 @@ p { margin: 0; }
 .about__inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 5rem; align-items: center; }
 .about__image {
   width: 100%; max-width: 340px; justify-self: center; aspect-ratio: 3 / 4; object-fit: cover;
-  object-position: 40% 30%; border-radius: 1.5rem;
+  object-position: 40% 30%; border-radius: 50px; border: 10px solid #f7f2ea;
   box-shadow: 0 24px 48px -12px color-mix(in srgb, var(--brown) 35%, transparent),
     0 8px 16px -8px color-mix(in srgb, var(--brown) 20%, transparent);
 }
