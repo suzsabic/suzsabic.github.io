@@ -11,7 +11,7 @@ export default function CodeCard() {
             <span><span className="k">const</span> suzana = {'{'}</span>
           </span>
           <span className="line line--prop">
-            <span><span className="p">rolle</span>: <span className="s">'Frontend-utvikler'</span>,</span>
+            <span><span className="p">rolle</span>: <span className="s">'Bachelorstudent'</span>,</span>
           </span>
           <span className="line line--prop">
             <span><span className="p">skole</span>: <span className="s">'Høyskolen Kristiania'</span>,</span>
@@ -21,7 +21,7 @@ export default function CodeCard() {
           </span>
           <span className="line line--prop">
             <span>
-              <span className="p">skills</span>: [<span className="s">'React'</span>, <span className="s">'Typescript'</span>,{' '}
+              <span className="p">ferdigheter</span>: [<span className="s">'React'</span>, <span className="s">'Typescript'</span>,{' '}
               <span className="s">'Javascript'</span>, <span className="s">'HTML'</span>, <span className="s">'CSS'</span>,{' '}
               <span className="s">'UI/UX'</span>]
             </span>

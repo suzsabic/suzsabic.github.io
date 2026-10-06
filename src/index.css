@@ -86,7 +86,7 @@ p { margin: 0; }
 
 /* Kodevindu */
 .code {
-  width: 100%; max-width: 440px; justify-self: center; background: var(--ink); color: var(--sand);
+  width: 100%; max-width: 480px; justify-self: center; background: var(--ink); color: var(--sand);
   border-radius: 1rem; overflow: hidden; font-size: clamp(0.8rem, 2.6vw, 0.95rem);
   box-shadow: 0 24px 48px -12px color-mix(in srgb, var(--brown) 35%, transparent),
     0 8px 16px -8px color-mix(in srgb, var(--brown) 20%, transparent);
@@ -207,11 +207,6 @@ p { margin: 0; }
   box-shadow: 0 24px 48px -12px color-mix(in srgb, var(--brown) 35%, transparent),
     0 8px 16px -8px color-mix(in srgb, var(--brown) 20%, transparent);
 }
-.timeline { margin-top: 2.5rem; border-top: 1px solid var(--beige); }
-.timeline li {
-  display: grid; grid-template-columns: 8rem 1fr; padding: 1rem 0;
-  border-bottom: 1px solid var(--beige); font-size: 0.95rem;
-}
 
 /* Contact */
 .contact { text-align: center; }
@@ -228,7 +223,6 @@ p { margin: 0; }
 @media (max-width: 800px) {
   .hero, .about__inner { grid-template-columns: 1fr; gap: 3rem; }
   .hero { min-height: auto; }
-  .hero__image { width: min(80%, 300px); }
   .grid { grid-template-columns: 1fr; }
   .modal__info { grid-template-columns: 1fr; padding: 1.5rem; }
   .slide { font-size: 2.5rem; }
