@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { profile } from '../data'
 
 export default function Contact() {
@@ -7,8 +9,12 @@ export default function Contact() {
         <p className="eyebrow">Kontakt</p>
         <a className="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>
         <div className="socials">
-          <a href="https://github.com/suzsabic">GitHub</a>
-          <a href="https://linkedin.com/in/suzana-s-53bb9a196">LinkedIn</a>
+          <a href="https://github.com/suzsabic" aria-label="GitHub">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="https://linkedin.com/in/suzana-s-53bb9a196" aria-label="LinkedIn">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
         </div>
       </section>
       <footer className="footer">

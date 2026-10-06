@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { projects } from '../data'
 import ProjectModal from './ProjectModal'
 
@@ -14,18 +15,17 @@ export default function Projects() {
       <div className="grid">
         {projects.map((p) => (
           <button type="button" className="card" key={p.id} onClick={() => setActive(p)}>
-            <div className={`card__img tone-${p.tone}`} role="img" aria-label="Placeholderbilde">
-              <span>{String(p.id).padStart(2, '0')}</span>
+            <div className="card__top">
+              <span className="card__icon" aria-hidden="true">
+                <FontAwesomeIcon icon={p.icon} />
+              </span>
             </div>
-            <div className="card__body">
-              <div>
-                <h3>{p.title}</h3>
-                <p className="muted">{p.type}</p>
-              </div>
-              <ul className="tags">
-                {p.tags.map((t) => <li key={t}>{t}</li>)}
-              </ul>
-            </div>
+            <p className="card__type">{p.type}</p>
+            <h3>{p.title}</h3>
+            <p className="card__text">{p.description}</p>
+            <ul className="tags">
+              {p.tags.map((t) => <li key={t}>{t}</li>)}
+            </ul>
           </button>
         ))}
       </div>

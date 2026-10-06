@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProjectModal({ project, onClose }) {
   const [index, setIndex] = useState(0)
@@ -35,10 +35,7 @@ export default function ProjectModal({ project, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <button ref={closeRef} className="modal__close" onClick={onClose} aria-label="Lukk">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
-            strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
-            <path d="M6 6l12 12M18 6 6 18" />
-          </svg>
+          <FontAwesomeIcon icon={faXmark} />
         </button>
 
         <div className="slideshow">
@@ -78,10 +75,6 @@ export default function ProjectModal({ project, onClose }) {
           <dl className="meta">
             <div><dt>År</dt><dd>{project.year}</dd></div>
           </dl>
-          <div className="modal__links">
-            <a className="btn" href="#">Se live</a>
-            <a className="btn" href="#">Kildekode</a>
-          </div>
         </div>
       </div>
     </div>

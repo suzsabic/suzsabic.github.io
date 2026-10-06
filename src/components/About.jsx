@@ -15,7 +15,9 @@ export default function About() {
             {skills.map((s) => <li key={s}>{s}</li>)}
           </ul>
         </div>
-        <img className="about__image" src={portrait} alt="Portrett av Suzana Sabic" />
+        <div className="about__photo">
+          <img className="about__image" src={portrait} alt="Portrett av Suzana Sabic" />
+        </div>
       </div>
     </section>
   )
