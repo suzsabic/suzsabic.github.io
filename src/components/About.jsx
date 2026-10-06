@@ -1,4 +1,5 @@
 import { skills } from '../data'
+import portrait from '../assets/suzana.jpg'
 
 export default function About() {
   return (
@@ -14,8 +15,7 @@ export default function About() {
             {skills.map((s) => <li key={s}>{s}</li>)}
           </ul>
         </div>
-        <div className="about__image">
-        </div>
+        <img className="about__image" src={portrait} alt="Portrett av Suzana Sabic" />
       </div>
     </section>
   )

@@ -175,8 +175,13 @@ p { margin: 0; }
 
 /* About */
 .about { background: var(--sand); }
-.about__inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: center; }
-.about__image { max-width: 320px; width: 100%; }
+.about__inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 5rem; align-items: center; }
+.about__image {
+  width: 100%; max-width: 340px; justify-self: center; aspect-ratio: 3 / 4; object-fit: cover;
+  object-position: 40% 30%; border-radius: 1.5rem;
+  box-shadow: 0 24px 48px -12px color-mix(in srgb, var(--brown) 35%, transparent),
+    0 8px 16px -8px color-mix(in srgb, var(--brown) 20%, transparent);
+}
 .timeline { margin-top: 2.5rem; border-top: 1px solid var(--beige); }
 .timeline li {
   display: grid; grid-template-columns: 8rem 1fr; padding: 1rem 0;
