@@ -34,5 +34,6 @@ export const skills = [
   'Swift',
   'Kotlin',
   '.NET/C#',
+  'SQL/MySQL',
   'Figma',
 ]
