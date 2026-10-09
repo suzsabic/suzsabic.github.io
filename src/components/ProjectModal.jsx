@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleRight, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight, faArrowUpRightFromSquare, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProjectModal({ project, onClose }) {
   const [index, setIndex] = useState(0)
@@ -40,11 +40,15 @@ export default function ProjectModal({ project, onClose }) {
 
         <div className="slideshow">
           <div className="slideshow__track" style={{ transform: `translateX(-${index * 100}%)` }}>
-            {project.slides.map((tone, i) => (
-              <div className={`slide tone-${tone}`} key={i} role="img"
-                aria-label={`Bilde ${i + 1} av ${count}`}>
-                <span>{String(i + 1).padStart(2, '0')}</span>
-              </div>
+            {project.slides.map((slide, i) => (
+              typeof slide === 'string' ? (
+                <div className={`slide tone-${slide}`} key={i} role="img"
+                  aria-label={`Bilde ${i + 1} av ${count}`}>
+                  <span>{String(i + 1).padStart(2, '0')}</span>
+                </div>
+              ) : (
+                <img className="slide slide--img" key={i} src={slide.src} alt={slide.alt} />
+              )
             ))}
           </div>
           <button className="slideshow__arrow slideshow__arrow--prev" onClick={() => go(-1)}
@@ -71,6 +75,12 @@ export default function ProjectModal({ project, onClose }) {
             <ul className="tags tags--lg">
               {project.tags.map((t) => <li key={t}>{t}</li>)}
             </ul>
+            {project.link && (
+              <a className="btn modal__link" href={project.link.href} target="_blank" rel="noopener noreferrer">
+                {project.link.label}
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </a>
+            )}
           </div>
           <dl className="meta">
             <div><dt>År</dt><dd>{project.year}</dd></div>
